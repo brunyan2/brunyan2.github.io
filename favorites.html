@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<!--
+Student Name: Blaine Runyan
+File Name: favorite.html
+Date: 02/10/2023
+-->
+<html lang="en">
+  <head>
+    <title>Favorites</title>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" type="text/css" href="css/styles.css">
+    <link href="https://fonts.googleapis.com/css?family=Open+Sans&display=swap" rel="stylesheet">
+  </head>
+  <body>
+   <nav class="mobile-nav">
+        <div id="menu-links">
+            <a href="index.html">Home</a>
+            <a href="about.html">About Me</a>
+            <a href="portfolio.html">Portfolio</a>
+            <a href="favorites.html">Favorites</a>
+            <a href="contact.html">Contact</a>
+        </div>
+        <a class="menu-icon" onclick="hamburger()">
+            <div>&#9776;</div>
+        </a>
+    </nav>
+
+    <nav class="desktop-only">
+      <ul>
+        <li><a href="index.html">Home</a></li>
+        <li><a href="about.html">About Me</a></li>
+        <li><a href="portfolio.html">Portfolio</a></li>
+        <li><a href="favorites.html">Favorites</a></li>
+        <li><a href="contact.html">Contact</a></li>
+      </ul>
+    </nav>
+
+    <main>
+      <article class="container">
+    <aside>
+      <h2 class="heading">Favorite Music</h2>
+      <ul>
+        <li>Hip-Hop
+          <audio controls>
+            <source src="media/hiphop.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+          </audio>
+        </li>
+        <li>Lofi
+          <audio controls>
+            <source src="media/lofi.mp3" type="audio/mp3">
+            Your browser does not support the audio element.
+          </audio>
+        </li>
+      </ul>
+    </aside>
+    <section>
+      <h4 class="heading"> Favorite Books </h4>
+      <ul>
+        <li><a href="https://a.co/d/2oypTmL" target="_blank">A Random Walk Down Wall Street</a></li>
+        <li><a href="https://a.co/d/8A61a65" target="_blank">1984</a></li>
+      </ul>
+    </section>
+          </article>
+      
+</main>
+
+<footer>
+  <div class="copyright">
+    <p>&copy; Copyright 2021. All Rights Reserved.</p>
+    <p><a href="brunyan2@atu.edu">brunyan2@atu.edu</a></p>
+  </div>
+  <div class="social">
+    <a href="https://www.facebook.com" target="_blank">
+    <img src="images/facebook-logo.png" alt="Facebook logo"></a>
+    <a href="https://www.twitter.com" target="_blank">
+    <img src="images/twitter-logo.png" alt="Twitter logo"></a>
+  </div>
+</footer>
+    <script src="scripts/script.js"></script>  
+  </body>
+</html>
