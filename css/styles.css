@@ -20,8 +20,8 @@ header figcaption {
 img {
   display: block;
   margin-left: auto;
-  margin-right:auto;
-  max-width: 300%;
+  margin-right: auto;
+  max-width: 100%;
 }
 
 .tab-desk, #menu-links {
@@ -30,8 +30,33 @@ img {
 
 /* Mobile viewport styles */
 
+/* Ensure table is visible on all platforms */
 table {
-  display: none;
+  width: 100%;
+  border-collapse: collapse;
+  margin-bottom: 2em;
+  background-color: #fff;
+  color: #333;
+}
+
+th, td {
+  padding: .5em;
+  border: 1px solid #ddd;
+}
+
+th {
+  background-color: #000;
+  color: #fff;
+  font-weight: bold;
+  text-align: left;
+}
+
+tr:nth-child(even) {
+  background-color: #f2f2f2;
+}
+
+tr:hover {
+  background-color: #f2f2f2;
 }
 
 .desktop-only {
@@ -124,8 +149,8 @@ nav a:hover {
 .mobile-nav a.menu-icon {
   display: block;
   position: absolute;
-  right: 0; 
-  top: 0;  
+  right: 0;
+  top: 0;
 }
  
 .menu-icon div {
@@ -133,8 +158,6 @@ nav a:hover {
   width: 50px;
   background-color: #252525;
 }
-
-
 
 /* Header */
 header {
@@ -204,94 +227,44 @@ footer p:not(:last-child) {
   margin-bottom: 10px;
 }
 
-.container {
-  background-color: #f9f9f9;
-  border-radius: 1em;
-  padding: 1em;
-  margin-bottom: 1em;
-}
-
-.heading {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.5em;
-  margin: 0.5em 0;
-}
-
-.text {
-  font-size: 1.1em;
-  line-height: 1.5;
-  margin: 0.5em 0;
-}
-
- ul, ol {
-  margin: 0;
-  padding: 0 0 0 2em;
-}
-
-li {
-  margin-bottom: 0.5em;
-}
-
-#portrait {
-  border-radius: 50%;
-  width: 50%;
-  height: auto;
-  margin: 1em auto;
-}
-
-iframe {
-  max-width: 100%;
-  height: auto;
-}
-
 /* Media Query for Tablet Viewport */
 @media only screen and (min-width: 550px), print {
+  .tab-desk {
+    display: block;
+  } 
 
-/* Tablet Viewport: Show tab-desk class, hide mobile class */  
-.tab-desk {
-  display: block;
-} 
+  .mobile, .mobile-nav, .main-nav {
+    display: none;  
+  } 
 
-.mobile, .mobile-nav, .main-nav {
-  display: none;  
-} 
+  .tablet-only {
+    display: block;
+  }
 
-.mobile-only {
-  display: none;
-}
+  .desktop-only {
+    display: flex;
+  }
 
-.tablet-only {
-  display:block;
-}
+  form {
+    width: 50%;
+    margin: 0 auto;
+  }
 
-.desktop-only {
-  display: flex;
-}
+  label {
+    font-size: 1.2em;
+    margin-top: 1.5em;
+  }
 
-table {
-  font-size: 0.8em;
-}
+  input [type="text"],
+  input [type="email"],
+  input [type="tel"],
+  select {
+    margin-bottom: 1.5em;
+  }
 
-form {
-  width: 50%;
-  margin: 0 auto;
-}
-
-label {
-  font-size: 1.2em;
-  margin-top: 1.5em;
-}
-
-input [type="text"],
-input [type="email"],
-input [type="tel"],
-select {
-  margin-bottom: 1.5em;
-}
-
-input[type="submit"] {
-  padding: .75em 1.5em;
-  font-size: 1.1em;
+  input[type="submit"] {
+    padding: .75em 1.5em;
+    font-size: 1.1em;
   }
 }
 
@@ -320,131 +293,52 @@ header h2 {
   font-size: 36px;
 }
 
-/*Desktop viewport styles*/
+/* Desktop viewport styles */
 @media only screen and (min-width: 1024px) {
-.mobile-only,
-.tablet-only {
-  display: none;
-}
-
-.desktop-only {
-  display: flex;
-}
-
-/* Style rules for Desktop viewport */
-nav {
-  padding: 2em 0;
-}
-
-nav a {
-  font-size: 1.5em;
-}
-
-nav a:hover {
-  color:#f9f9f9;
-}
-
-header h1 {
-  font-size: 72px;
-}
-
-  form {
-  width: 70%;
-  margin: 0 auto;
-}
-
-label {
-  font-size: 1.3em;
-  margin-top: 2em;
-}
-
-input [type="text"],
-input [type="email"],
-input [type="tel"],
-select {
-  margin-bottom: 2em;
-  font-size: 1.1em;
-}
-
-input[type="submit"] {
-  padding: 1em 2em;
-  font-size: 1.2em;
+  .tablet-only {
+    display: none;
   }
 
-/* Table Styles */
-table {
-  width: 100%;
-  border-collapse: collapse;
-  margin-bottom: 2em;
-  background-color: #fff;
-  color: #333;
-}
+  .desktop-only {
+    display: flex;
+  }
 
-/* Table Header Styles */
-th {
-  background-color: #000;
-  color: #fff;
-  font-weight: bold;
-  padding: .5em;
-  text-align: left;
-}
+  nav {
+    padding: 2em 0;
+  }
 
-/* Table Row Styles */
-tr:nth-child(even)  {
-  background-color: #f2f2f2;
-}
+  nav a {
+    font-size: 1.5em;
+  }
 
-tr:hover {
-  background-color: #f2f2f2;
-}
+  nav a:hover {
+    color: #f9f9f9;
+  }
 
-td {
-  padding: .5em;
-  border: 1px solid #ddd
-}
+  header h1 {
+    font-size: 72px;
+  }
 
-/* Form Styles */
-form {
-  background-color: #f9f9f9;
-  border-radius: 1em;
-  padding: 1em;
-  margin-bottom: 1em;
-}
+  form {
+    width: 70%;
+    margin: 0 auto;
+  }
 
-label {
-  font-family: 'Open Sans', sans-serif;
-  font-size: 1.1em;
-  margin-top: 1em;
-  display: block;
-}
+  label {
+    font-size: 1.3em;
+    margin-top: 2em;
+  }
 
-input [type="text"],
-input [type="email"],
-input [type="tel"],
-select {
-  width: 100%;
-  padding: .5em;
-  border-radius: .3em;
-  margin-bottom: 1em;
-  border: none;
-  background-color: #e6e6e6;
-}
+  input [type="text"],
+  input [type="email"],
+  input [type="tel"],
+  select {
+    margin-bottom: 2em;
+    font-size: 1.1em;
+  }
 
-textarea {
-  width: 100%;
-  padding: .05em;
-  border-radius: .3em;
-  margin-bottom: 1em;
-  border: none;
-  background-color: #e6e6e6;
-}
-
-input[type="submit"] {
-  background-color: #252525;
-  color: #fff;
-  border: none;
-  padding: .5em 1em;
-  border-radius: .3em;
-  cursor: pointer;
-}
+  input[type="submit"] {
+    padding: 1em 2em;
+    font-size: 1.2em;
+  }
 }
